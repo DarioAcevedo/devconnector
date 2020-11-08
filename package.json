@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "server" : "nodemon server"
+    "server": "nodemon server"
   },
   "author": "Dario Acevedo",
   "license": "MIT",
@@ -17,7 +17,8 @@
     "gravatar": "^1.8.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.11",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "swagger": "^0.7.5"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
