@@ -1,4 +1,7 @@
 {
     "mongoURI" : "mongodb+srv://dario:dario123@cluster0.uqgxo.mongodb.net/test?retryWrites=true",
-    "jwtSecret" : "mysecrettoken"
+    "jwtSecret" : "mysecrettoken",
+    "githubSecret" : "275986f8f94432bcdba4ab4254598b9e8c2b628d",
+    "githubClientId" : "Iv1.c7adb99d0ad765ae",
+    "githubPrivateKey" : "SHA256:tmc97qGcgNOO/e8QV1e4Afq90a6eK1u/C9EcuNs2aM0="
 }
