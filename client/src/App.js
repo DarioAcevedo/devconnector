@@ -6,7 +6,16 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import './App.css';
 
+//redux
+import { Provider } from 'react-redux';
+import store from './store';
+
+/*React is made from components, the components are created in order to make things with small reusable
+peaces of code. In each component, you can manage the "State" wich means you can use this info for sending 
+it to the API and so on. */
+
 const App = () => (
+  <Provider store = {store}>
   <Router>
     <Fragment>
       <Navbar/>
@@ -19,6 +28,7 @@ const App = () => (
       </section>
     </Fragment>
   </Router>
+  </Provider>
   );
 
 export default App;
