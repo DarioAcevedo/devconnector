@@ -4,11 +4,13 @@ import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
-import './App.css';
+
+import Alert from './components/layout/Alert';
 
 //redux
 import { Provider } from 'react-redux';
 import store from './store';
+import './App.css';
 
 /*React is made from components, the components are created in order to make things with small reusable
 peaces of code. In each component, you can manage the "State" wich means you can use this info for sending 
@@ -21,6 +23,7 @@ const App = () => (
       <Navbar/>
       <Route exact path="/" component={Landing}/>
       <section className="container">
+        <Alert />
         <Switch>
           <Route exact path="/register" component={Register}/>
           <Route exact path="/login" component={Login}/>
