@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom';
-//De redux
+//Importing connect in order to have access to the store
 import { connect } from 'react-redux';
-//Importamos el action que va a despachar el reducer
+//Import the actions that we will take from the reducer
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';

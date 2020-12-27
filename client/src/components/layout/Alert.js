@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 const Alert = ({ alerts }) => 
 alerts !== null && alerts.length > 0 && alerts.map(alert => (
+    //We send the type of alert in the reducer and then we set it into the CSS
     <div key= {alert.id} className={`alert alert-${alert.alertType}`}>
         {alert.msg}
     </div>

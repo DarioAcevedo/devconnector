@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
@@ -6,6 +6,10 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 
 import Alert from './components/layout/Alert';
+
+//Auth check
+import { loadUser } from './actions/auth';
+import {setAuthToken} from './utils/setAuthToken';
 
 //redux
 import { Provider } from 'react-redux';
@@ -16,7 +20,17 @@ import './App.css';
 peaces of code. In each component, you can manage the "State" wich means you can use this info for sending 
 it to the API and so on. */
 
-const App = () => (
+if(localStorage.token) {
+  setAuthToken(localStorage.token);
+}
+
+const App = () => {
+  //UseEffect takes the [] for just running once
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
+  
+  return (
   <Provider store = {store}>
   <Router>
     <Fragment>
@@ -32,6 +46,6 @@ const App = () => (
     </Fragment>
   </Router>
   </Provider>
-  );
+  );};
 
 export default App;
